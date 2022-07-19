@@ -7,7 +7,7 @@ for (let i = 0; i < slides.length; i++) {
 
 let step = 0;
 let offset = 0;
-let picstep = slider.length-2;
+let picstep = 2;
 
 function draw() {
   let img = document.createElement('img');
@@ -27,8 +27,8 @@ function draw() {
   } else {
     step++;
   }
-  if (offset + 1.5 == 6) {
-    offset = 4.5;
+  if (offset + 1.5 == slider.length * 1.5) {
+    offset = slider.length*1.5 - 1.5;
   } else {
     offset += 1.5;
   }
