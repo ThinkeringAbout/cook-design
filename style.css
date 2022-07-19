@@ -43,18 +43,7 @@ body {
   color: #fff;
 }
 
-.upmenu button {
-  width: 105px;
-  height: 38px;
-  border-radius: 20px;
-  color: white;
-  border: 3px solid #fff;
-  background: none;
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  text-align: center;
-}
+
 
 .main {
   margin-top: 150px;
@@ -111,16 +100,28 @@ h1 {
   border: 1px solid white;
   border-radius: 50%;
   overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all ease 1s;
 }
 
-.slide {
+.main .slide-container {
   height: 350px;
   width: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   border: 2px solid white;
   border-radius: 60px;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slide-container .slide {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  left:0;
+  top:0;
 }
