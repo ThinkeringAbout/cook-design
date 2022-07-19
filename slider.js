@@ -40,6 +40,7 @@ function getpic() {
 }
 
 function move() {
+  document.onclick = null;
   let slides2 = document.querySelectorAll('.slide-single');
   let offset2 = 0;
   slides2[1].style['border-color'] = 'white';
@@ -51,10 +52,9 @@ function move() {
     slides2[0].remove();
     slides2[2].style['border-color'] = 'red';
     slides2[2].style['border-width'] = 3 + 'px';
-    setTimeout(function() {
-      draw();
-    }, 100)
-  }, 230)
+    draw();
+    document.onclick = move;
+  }, 600)
 }
 
 for (let i = 0; i < slider.length; i++) {
